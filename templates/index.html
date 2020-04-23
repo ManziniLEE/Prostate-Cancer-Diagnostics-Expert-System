@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PCD Expert System | Home</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{{ url_for('static', filename='css/sb-admin-2.css') }}" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+	<li class="nav-item">
+	<div class="clearfix"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></div>
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid img-profile" alt="logo" style="width:auto; height: auto;">
+        </div>
+        <div class="sidebar-brand-text mx-3">CRHC Expert System <sup><i class="fa fa-ambulance"></i></sup></div>
+      </a>
+	</li>
+	<div class="clearfx"><br><br></div>
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Home</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Prostate Cancer Expert System
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Data Entry</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Entry Forms:</h6>
+            <a class="collapse-item" href="/entry/">Symptoms Entry Form</a>
+            
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        User
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Profile</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+           
+            <a class="collapse-item" href="/profile/">Profile</a>
+            
+          </div>
+		   <div class="bg-white py-2 collapse-inner rounded">
+           
+            <a class="collapse-item" href="/results">Results</a>
+            
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+			
+			<li class="nav-item">
+              <span class="badge badge-info float-right">Patient logged-in</span>
+            </li>
+
+           
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter">0</span>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Patients Message Center
+                </h6>
+               <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="{{ url_for('static', filename='images/user.png')}}" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Welcome</div>
+                    <div class="small text-gray-500">System · Now</div>
+                  </div>
+                </a>
+               <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{session['email']}}</span>
+                
+				<img class="img-profile rounded-circle" src="{{ url_for('static', filename='images/user.png') }}" alt="">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="/profile/">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/logout/" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Expert System Home</h1>
+            <!--a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a-->
+          </div>
+
+          <!-- Content Row -->
+         <!-- Content Row -->
+          <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Approximate cases of prostate cancer diagnosed in men over 65</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">60%</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example ->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example ->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example ->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div-->
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
+			<!-- Approach -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Prostate Cancer</h6>
+                </div>
+                <div class="card-body">
+                 <div class="x_content">
+				   <h2>Treatment</h2>	
+<div class="contentimg">
+    <img src="/-/media/kcms/gbs/patient-consumer/images/2017/05/03/21/14/prostate-cancer-patient-8col.jpg " alt="Doctor talks with prostate cancer patient" />
+    <span class="title">Physician consultation on prostate cancer</span>
+    <p>A  Clinic oncologist discusses treatment options.</p>
+</div>
+
+<p>Your prostate cancer treatment options depend on several factors, such as how fast your cancer is growing, how much it has spread and your overall health, as well as the potential benefits or side effects of the treatment.</p>
+
+            
+        
+            
+            <h3>Immediate treatment may not be necessary</h3><p>For men diagnosed with low-risk prostate cancer, treatment may not be necessary right away. Some men may never need treatment. Instead, doctors sometimes recommend active surveillance.</p>
+
+<p>In active surveillance, regular follow-up blood tests, rectal exams and possibly biopsies may be performed to monitor progression of your cancer. If tests show your cancer is progressing, you may opt for a prostate cancer treatment such as surgery or radiation.</p>
+
+<p>Active surveillance may be an option for cancer that isn't causing symptoms, is expected to grow very slowly and is confined to a small area of the prostate. Active surveillance may also be considered for someone who has another serious health condition or who is of an advanced age that makes cancer treatment more difficult.</p>
+
+<p>Active surveillance carries a risk that the cancer may grow and spread between checkups, making the cancer less likely to be cured.</p>
+
+
+            
+        
+            
+            <h3>Surgery to remove the prostate</h3>	
+<div class="contentimg">
+    <img src="/-/media/kcms/gbs/patient-consumer/images/2017/05/03/21/19/prostate-cancer-consult-0004-8col.jpg " alt="Surgeon consults with prostate cancer patient" />
+    <span class="title">Clinic surgeons explain all prostate cancer options</span>
+    <p>A Clinic surgeon converses about prostate cancer surgical options.</p>
+</div>
+
+<p>Surgery for prostate cancer involves removing the prostate gland (radical prostatectomy), some surrounding tissue and a few lymph nodes. Radical prostatectomy can be performed in several ways:</p>
+
+<ul>
+<li><strong>Using a robot to assist with surgery.</strong> During robot-assisted surgery, the instruments are attached to a mechanical device (robot) and inserted into your abdomen through several small incisions. The surgeon sits at a console and uses hand controls to guide the robot to move the instruments. Robotic prostatectomy may allow the surgeon to make more-precise movements with surgical tools than is possible with traditional minimally invasive surgery.</li>
+<li><strong>Making an incision in your abdomen.</strong> During retropubic surgery, the prostate gland is taken out through an incision in your lower abdomen.</li>
+</ul>
+
+<p>Discuss with your doctor which type of surgery is best for your specific situation.</p>
+
+<p>Radical prostatectomy carries a risk of urinary incontinence and erectile dysfunction. Ask your doctor to explain the risks you may face based on your situation, the type of procedure you select, your age, your body type and your overall health.</p> 
+
+
+            
+        
+            
+            <h3>Radiation therapy</h3><p>Radiation therapy uses high-powered energy to kill cancer cells. Prostate cancer radiation therapy can be delivered in two ways:</p>
+<ul>
+    <li><strong>Radiation that comes from outside of your body (external beam radiation).</strong> During external beam radiation therapy, you lie on a table while a machine moves around your body, directing high-powered energy beams, such as X-rays or protons, to your prostate cancer. You typically undergo external beam radiation treatments five days a week for several weeks.</li>
+    <li><strong>Radiation placed inside your body (brachytherapy).</strong> Brachytherapy involves placing many rice-sized radioactive seeds in your prostate tissue. The radioactive seeds deliver a low dose of radiation over a long period of time. Your doctor implants the radioactive seeds in your prostate using a needle guided by ultrasound images. The implanted seeds eventually stop emitting radiation and don't need to be removed.</li>
+</ul>
+<p>Side effects of radiation therapy can include painful, frequent or urgent urination, as well as rectal symptoms such as loose stools or pain when passing stools. Erectile dysfunction can also occur.</p>
+
+            
+        
+            
+            <h3>Hormone therapy</h3><p>Hormone therapy is treatment to stop your body from producing the male hormone testosterone. Prostate cancer cells rely on testosterone to help them grow. Cutting off the supply of testosterone may cause cancer cells to die or to grow more slowly.</p>
+
+<p>Hormone therapy options include:</p>
+
+<ul>
+<li><strong>Medications that stop your body from producing testosterone.</strong> Medications known as luteinizing hormone-releasing hormone (LH-RH) agonists prevent the testicles from receiving messages to make testosterone. Drugs typically used in this type of hormone therapy include leuprolide (Lupron, Eligard), goserelin (Zoladex), triptorelin (Trelstar) and histrelin (Vantas). Other drugs sometimes used include ketoconazole and abiraterone (Zytiga).</li>
+<li><strong>Medications that block testosterone from reaching cancer cells.</strong> Medications known as anti-androgens prevent testosterone from reaching your cancer cells. Examples include bicalutamide (Casodex), nilutamide (Nilandron) and flutamide. The drug enzalutamide (Xtandi) may be an option when other hormone therapies are no longer effective.</li>
+<li><strong>Surgery to remove the testicles (orchiectomy).</strong> Removing your testicles reduces testosterone levels in your body.</li>
+</ul>
+
+<p>Hormone therapy is used in men with advanced prostate cancer to shrink the cancer and slow the growth of tumors. In men with early-stage prostate cancer, hormone therapy may be used to shrink tumors before radiation therapy, which can increase the likelihood that radiation therapy will be successful.</p>
+
+<p>Side effects of hormone therapy may include erectile dysfunction, hot flashes, loss of bone mass, reduced sex drive and weight gain.</p>
+
+
+            
+        
+            
+            <h3>Freezing prostate tissue</h3><p>Cryosurgery or cryoablation involves freezing tissue to kill cancer cells.</p>
+
+<p>During cryosurgery for prostate cancer, small needles are inserted in the prostate using ultrasound images as guidance. A very cold gas is placed in the needles, which causes the surrounding tissue to freeze. A second gas is then placed in the needles to reheat the tissue. The cycles of freezing and thawing kill the cancer cells and some surrounding healthy tissue.</p>
+
+<p>Initial attempts to use cryosurgery for prostate cancer resulted in high complication rates and unacceptable side effects. However, newer technologies have lowered complication rates, improved cancer control and made the procedure easier to tolerate. Cryosurgery is more frequently used as a salvage therapy for men who haven't been helped by radiation therapy.</p>
+
+            
+        
+            
+            <h3>Chemotherapy</h3><p>Chemotherapy uses drugs to kill rapidly growing cells, including cancer cells. Chemotherapy can be administered through a vein in your arm, in pill form or both.</p>
+
+<p>Chemotherapy may be a treatment option for men with prostate cancer that has spread to remote body locations. Chemotherapy may also be an option for cancers that don't respond to hormone therapy.</p>
+
+
+            
+        
+            
+            <h3>Biological therapy</h3><div class=" media lightbox right p-3">
+<ul>
+    <li>
+        <div class="photo"><a id=et_dsC73A6CB3_tg6F678A1B href="/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/44/ds00043_-my01635_im03217_hdg7_seedthu_jpg.jpg"><img src="/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/44/ds00043_-my01635_im03217_hdg7_seedthu_jpg.jpg" alt="Permanent prostate brachytherapy"/></a></div><div class="text"><h3>Permanent prostate brachytherapy</h3></div><div class="text-extend"><h3>Permanent prostate brachytherapy</h3><span class="caption"><p>Permanent prostate brachytherapy involves placing many radioactive seeds within the prostate to treat prostate cancer. During the procedure, an ultrasound probe is placed in the rectum to help guide the placement of seeds. The seeds emit radiation that dissipates over a few months.</p></span></div>
+   </li>
+</ul>
+</div>
+
+
+<p>Biological therapy (immunotherapy) uses your body's immune system to fight cancer cells. One type of biological therapy called sipuleucel-T (Provenge) has been developed to treat advanced, recurrent prostate cancer.</p>
+
+<p>This treatment takes some of your own immune cells, genetically engineers them in a laboratory to fight prostate cancer, then injects the cells back into your body through a vein. Some men do respond to this therapy with some improvement in their cancer, but the treatment is very expensive and requires multiple treatments.</p> 
+
+
+        
+            <div class="requestappt"><a ID="et_linkAppointment_midContent" href="#" class="ico-appt">Request an Appointment at  Clinic</a></div>
+    
+
+            
+
+            
+        
+            
+    <h2>Clinical trials</h2>
+    <p>
+        <a id="phmaincontent_0_phleftchannel_0_SectionRepeater_phclinicaltrials_0_17_ctLink_17" href="#">Explore Clinic studies</a> testing new treatments, interventions and tests as a means to prevent, detect, treat or manage this disease.
+    </p>
+
+            
+
+            
+        
+            
+            <h2>Alternative medicine</h2><p>No complementary or alternative treatments will cure prostate cancer. However, complementary and alternative prostate cancer treatments may help you cope with the side effects of cancer and its treatment.</p>
+
+<p>Nearly everyone diagnosed with cancer experiences some distress at some point. If you're distressed, you may feel sad, angry or anxious. You may experience difficulty sleeping or find yourself constantly thinking about your cancer.</p>
+
+<p>Several complementary medicine techniques may help you cope with your distress, including:</p>
+
+<ul>
+<li>Art therapy</li>
+<li>Dance or movement therapy</li>
+<li>Exercise</li>
+<li>Meditation</li>
+<li>Music therapy</li>
+<li>Relaxation techniques</li>
+<li>Spirituality</li>
+</ul>
+
+<p>Discuss your feelings and concerns with your doctor. In some cases, treatment for distress may require medications.</p>
+					  
+                  </div>
+                </div>
+              </div>
+
+			</div>
+			</div>
+
+          <!-- Content Row -->
+          <div class="row">
+			
+			</div>
+
+        </div>
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy;  PCD Expert System 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/logout/">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- core JavaScript-->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{{ url_for('static', filename='js/sb-admin-2.min.js') }}"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>
